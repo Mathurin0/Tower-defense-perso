@@ -35,5 +35,8 @@
     <ClInclude Include="class_ennemis.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="placer_tours.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
