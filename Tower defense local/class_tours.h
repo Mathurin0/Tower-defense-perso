@@ -9,9 +9,17 @@ private:
     int level;
     int cout[3];
     sf::Vector2i position;
+    Zombie* cible;
 public:
     Canon(int x, int y);
     void level_up();
+    sf::Vector2i get_position() {
+        return this->position;
+    }
+    int get_portee() {
+        return this->portee;
+    }
+    void set_cible(Zombie* cible);
 };
 Canon::Canon(int x, int y) {
     this->degat_par_coup = 20;
@@ -38,6 +46,10 @@ void Canon::level_up() {
         this->coup_par_seconde = 8;       //TODO
     }
 }
+void Canon::set_cible(Zombie* cible) {
+    this->cible = cible;
+}
+
 
 
 class Canon_Glace {
@@ -48,9 +60,17 @@ private:
     int level;
     int cout[3];
     sf::Vector2i position;
+    Zombie* cible;
 public:
     Canon_Glace(int x, int y);
     void level_up();
+    sf::Vector2i get_position() {
+        return this->position;
+    }
+    int get_portee() {
+        return this->portee;
+    }
+    void set_cible(Zombie* cible);
 };
 Canon_Glace::Canon_Glace(int x, int y) {
     this->degat_par_coup = 10;
@@ -77,6 +97,10 @@ void Canon_Glace::level_up() {
         this->coup_par_seconde = 4;       //TODO
     }
 }
+void Canon_Glace::set_cible(Zombie* cible) {
+    this->cible = cible;
+}
+
 
 
 class Mortier {
@@ -87,9 +111,17 @@ private:
     int level;
     int cout[3];
     sf::Vector2i position;
+    Zombie* cible;
 public:
     Mortier(int x, int y);
     void level_up();
+    sf::Vector2i get_position() {
+        return this->position;
+    }
+    int get_portee() {
+        return this->portee;
+    }
+    void set_cible(Zombie* cible);
 };
 Mortier::Mortier(int x, int y) {
     this->degat_par_coup = 30;
@@ -116,6 +148,9 @@ void Mortier::level_up() {
         this->coup_par_seconde = 4;       //TODO
     }
 }
+void Mortier::set_cible(Zombie* cible) {
+    this->cible = cible;
+}
 
 
 
@@ -127,9 +162,17 @@ private:
     int level;
     int cout[3];
     sf::Vector2i position;
+    Zombie* cible;
 public:
     Archers(int x, int y);
     void level_up();
+    sf::Vector2i get_position() {
+        return this->position;
+    }
+    int get_portee() {
+        return this->portee;
+    }
+    void set_cible(Zombie* cible);
 };
 Archers::Archers(int x, int y) {
     this->degat_par_coup = 15;
@@ -155,4 +198,7 @@ void Archers::level_up() {
         this->portee = 170;               //TODO
         this->coup_par_seconde = 15;       //TODO
     }
+}
+void Archers::set_cible(Zombie* cible) {
+    this->cible = cible;
 }

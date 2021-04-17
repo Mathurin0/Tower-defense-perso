@@ -1,6 +1,6 @@
 #pragma region variables
 int place = 1;
-int selection = 0;
+int selection = 1;
 sf::Texture Archer_t;
 sf::Texture Canon_t;
 sf::Texture Canon_glace_t;
@@ -21,11 +21,11 @@ std::vector<Archers*> archers;
 void creation_tour() {
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad0)) {
-        int selection = 0;
+        selection = 0;
         place = 0;
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad1)) {
-        int selection = 1;
+        selection = 1;
         place = 0;
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad2)) {
@@ -40,6 +40,7 @@ void creation_tour() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && place == 0) {
         sf::Vector2i position_souris = sf::Mouse::getPosition(window);
         if (selection == 0) {
+            std::cout << "Canon" << std::endl;
             if (!Canon_t.loadFromFile("canon1.png")) {
                 std::cout << "Erreur du chargement de canon1.png" << std::endl;
             }
@@ -54,6 +55,7 @@ void creation_tour() {
             place = 1;
         }
         else if (selection == 1) {
+            std::cout << "Glace" << std::endl;
             if (!Canon_glace_t.loadFromFile("glace1.png")) {
                 std::cout << "Erreur du chargement de glace1.png" << std::endl;
             }
@@ -68,6 +70,7 @@ void creation_tour() {
             place = 1;
         }
         else if (selection == 2) {
+            std::cout << "Mortier" << std::endl;
             if (!Mortier_t.loadFromFile("mortier1.png")) {
                 std::cout << "Erreur du chargement de mortier1.png" << std::endl;
             }
@@ -82,6 +85,7 @@ void creation_tour() {
             place = 1;
         }
         else if (selection == 3) {
+            std::cout << "Archer" << std::endl;
             if (!Archer_t.loadFromFile("archer1.png")) {
                 std::cout << "Erreur du chargement de archer1.png" << std::endl;
             }

@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClInclude Include="class_ennemis.h" />
     <ClInclude Include="class_tours.h" />
+    <ClInclude Include="detection_ennemis.h" />
     <ClInclude Include="forteresse.h" />
     <ClInclude Include="joueur.h" />
     <ClInclude Include="placer_tours.h" />

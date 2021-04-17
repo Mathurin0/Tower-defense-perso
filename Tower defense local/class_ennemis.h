@@ -4,9 +4,13 @@ private:
     int Degat;
     int vitesse;
     int pieces;
+    sf::Vector2i position;
 public:
     Zombie();
     void prendre_degats(int nb_degats);
+    sf::Vector2i get_position() {
+        return this->position;
+    }
 };
 
 Zombie::Zombie() {
@@ -27,9 +31,13 @@ private:
     int Degat;
     int vitesse;
     int pieces;
+    sf::Vector2i position;
 public:
     Tank();
     void prendre_degats(int nb_degats);
+    sf::Vector2i get_position() {
+        return this->position;
+    }
 };
 
 Tank::Tank() {
@@ -50,9 +58,13 @@ private:
     int Degat;
     int vitesse;
     int pieces;
+    sf::Vector2i position;
 public:
     Runner();
     void prendre_degats(int nb_degats);
+    sf::Vector2i get_position() {
+        return this->position;
+    }
 };
 
 Runner::Runner() {
@@ -73,10 +85,14 @@ private:
     int Degat;
     int vitesse;
     int pieces;
+    sf::Vector2i position;
 public:
     Mage();
     void prendre_degats(int nb_degats);
     void regen();
+    sf::Vector2i get_position() {
+        return this->position;
+    }
 };
 
 Mage::Mage() {
