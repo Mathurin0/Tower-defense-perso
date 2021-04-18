@@ -1,9 +1,10 @@
 #include "Header.h"
+#include "joueur.h"
 
 #pragma region variables
 sf::RenderWindow window;
 sf::Vector2i position_souris;
-
+Score* joueur = new Score();
 #pragma endregion variables
 
 
@@ -12,6 +13,7 @@ sf::Vector2i position_souris;
 #include "placer_tours.h"
 #include "zombie.h"
 #include "detection_ennemis.h"
+#include "attaquer_ennemis.h"
 
 
 

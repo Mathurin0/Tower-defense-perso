@@ -62,5 +62,8 @@
     <ClInclude Include="zombie.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="attaquer_ennemis.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

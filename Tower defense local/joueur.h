@@ -5,6 +5,9 @@ private:
     int solde;
 public:
     Score();
+    void gagner_argent(int nb_pieces) {
+        this->solde += nb_pieces;
+    }
 };
 
 Score::Score() {
