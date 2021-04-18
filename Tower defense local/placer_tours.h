@@ -41,7 +41,7 @@ void creation_tour() {
         sf::Vector2i position_souris = sf::Mouse::getPosition(window);
         if (selection == 0) {
             std::cout << "Canon" << std::endl;
-            if (!Canon_t.loadFromFile("canon1.png")) {
+            if (!Canon_t.loadFromFile("ressources/img/canon1.png")) {
                 std::cout << "Erreur du chargement de canon1.png" << std::endl;
             }
             Canon_t.setSmooth(true);
@@ -56,7 +56,7 @@ void creation_tour() {
         }
         else if (selection == 1) {
             std::cout << "Glace" << std::endl;
-            if (!Canon_glace_t.loadFromFile("glace1.png")) {
+            if (!Canon_glace_t.loadFromFile("ressources/img/glace1.png")) {
                 std::cout << "Erreur du chargement de glace1.png" << std::endl;
             }
             Canon_glace_t.setSmooth(true);
@@ -71,7 +71,7 @@ void creation_tour() {
         }
         else if (selection == 2) {
             std::cout << "Mortier" << std::endl;
-            if (!Mortier_t.loadFromFile("mortier1.png")) {
+            if (!Mortier_t.loadFromFile("ressources/img/mortier1.png")) {
                 std::cout << "Erreur du chargement de mortier1.png" << std::endl;
             }
             Mortier_t.setSmooth(true);
@@ -86,7 +86,7 @@ void creation_tour() {
         }
         else if (selection == 3) {
             std::cout << "Archer" << std::endl;
-            if (!Archer_t.loadFromFile("archer1.png")) {
+            if (!Archer_t.loadFromFile("ressources/img/archer1.png")) {
                 std::cout << "Erreur du chargement de archer1.png" << std::endl;
             }
             Archer_t.setSmooth(true);
@@ -105,11 +105,7 @@ void creation_tour() {
 
 
 void affichage_tours(){
-    int taille = archers.size();
-    for (int i = 0; i < taille; i++){
-        window.draw(sprites_archers[i]);
-    }
-    taille = canons.size();
+    int taille = canons.size();
     for (int i = 0; i < taille; i++) {
         window.draw(sprites_canons[i]);
     }
@@ -120,5 +116,9 @@ void affichage_tours(){
     taille = mortiers.size();
     for (int i = 0; i < taille; i++) {
         window.draw(sprites_mortiers[i]);
+    }
+    taille = archers.size();
+    for (int i = 0; i < taille; i++){
+        window.draw(sprites_archers[i]);
     }
 }

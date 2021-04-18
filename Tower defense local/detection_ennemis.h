@@ -1,6 +1,4 @@
-#pragma region variables
-std::vector<Zombie*> zombies;
-#pragma endregion variables
+
 
 void detection() {
 	int taille_zombie = zombies.size();
