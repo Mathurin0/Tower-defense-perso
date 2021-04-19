@@ -26,9 +26,6 @@
     <ClInclude Include="vague.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="forteresse.h">
-      <Filter>Fichiers sources</Filter>
-    </ClInclude>
     <ClInclude Include="joueur.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>

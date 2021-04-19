@@ -21,7 +21,7 @@ public:
     int get_portee() {
         return this->portee;
     }
-    void set_cible(Zombie* cible);
+    void set_cible(Zombie* zonzon);
     Zombie* get_cible() {
         return this->cible;
     }
@@ -75,8 +75,8 @@ void Canon::level_up() {
         this->coup_par_seconde = 8;
     }
 }
-void Canon::set_cible(Zombie* cible) {
-    this->cible = cible;
+void Canon::set_cible(Zombie* zonzon) {
+    this->cible = zonzon;
 }
 
 

@@ -20,19 +20,19 @@ std::vector<Archers*> archers;
 
 void creation_tour() {
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad0)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         selection = 0;
         place = 0;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad1)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         selection = 1;
         place = 0;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad2)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
         selection = 2;
         place = 0;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad3)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
         selection = 3;
         place = 0;
     }
@@ -47,6 +47,7 @@ void creation_tour() {
             Canon_t.setSmooth(true);    
             sf::Sprite sprite_Canon;
             sprite_Canon.setTexture(Canon_t);
+            sprite_Canon.setScale(0.5, 0.5);
             sprite_Canon.setPosition(position_souris.x, position_souris.y);
             sprites_canons.push_back(sprite_Canon);
 
@@ -62,6 +63,7 @@ void creation_tour() {
             Canon_glace_t.setSmooth(true);
             sf::Sprite sprite_Canon_glace;
             sprite_Canon_glace.setTexture(Canon_glace_t);
+            sprite_Canon_glace.setScale(0.35, 0.35);
             sprite_Canon_glace.setPosition(position_souris.x, position_souris.y);
             sprites_canons_glace.push_back(sprite_Canon_glace);
 
@@ -77,6 +79,7 @@ void creation_tour() {
             Mortier_t.setSmooth(true);
             sf::Sprite sprite_Mortier;
             sprite_Mortier.setTexture(Mortier_t);
+            sprite_Mortier.setScale(0.35, 0.35);
             sprite_Mortier.setPosition(position_souris.x, position_souris.y);
             sprites_mortiers.push_back(sprite_Mortier);
 
@@ -92,6 +95,7 @@ void creation_tour() {
             Archer_t.setSmooth(true);
             sf::Sprite sprite_Archer;
             sprite_Archer.setTexture(Archer_t);
+            sprite_Archer.setScale(0.75, 0.75);
             sprite_Archer.setPosition(position_souris.x, position_souris.y);
             sprites_archers.push_back(sprite_Archer);
 

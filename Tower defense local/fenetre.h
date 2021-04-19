@@ -50,13 +50,16 @@ void Window() {
 
         window.draw(sprite_map);
 
+        
+        detection();
+        attaque();
+
         creation_tour();
         affichage_tours();
 
         affichage_chateau();
 
 
-   
         spawn_zombie();
         affichage_zombies();
         deplacement_zombie();

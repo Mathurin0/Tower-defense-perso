@@ -98,12 +98,14 @@ void deplacement_zombie() {
     for (int i = 0; i < taille; i++) {
 
         sprites_zombies[i].move(3, 0);
+        sf::Vector2i pos_zombie = zombies[i]->get_position();
+        zombies[i]->emplacement(pos_zombie.x + 3, pos_zombie.y);
         
 
         if (sprites_zombies[i].getPosition().x >= 1480)
         {
 
-            std::cout << "Le zombie " << i << " vient de toucher le chateau" << std::endl;
+            //std::cout << "Le zombie " << i << " vient de toucher le chateau" << std::endl;
             sprites_zombies[i].setColor(sf::Color::Transparent);
 
         }

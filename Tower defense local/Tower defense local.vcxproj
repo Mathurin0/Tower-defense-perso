@@ -152,7 +152,6 @@
     <ClInclude Include="class_tours.h" />
     <ClInclude Include="detection_ennemis.h" />
     <ClInclude Include="fenetre.h" />
-    <ClInclude Include="forteresse.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="zombie.h" />

@@ -11,7 +11,7 @@ void detection() {
 
 	int taille_tour = canons.size();
 	for (int i = 0; i < taille_tour; i++) {
-		if (canons[i]->get_cible() != NULL)
+		if (canons[i]->get_cible() == NULL)
 		{
 			distance_min = 1000;
 			for (int j = 0; j < taille_zombie; j++) {
@@ -25,8 +25,10 @@ void detection() {
 					x_mob = position_mob.x;
 					distance = sqrt(pow((y_tour - y_mob), 2) + pow((x_tour - x_mob), 2));
 					if (distance <= canons[i]->get_portee() && distance < distance_min) {
+						distance_min = distance;
 						canons[i]->set_cible(zombies[j]);
 						canons[i]->set_position_ennemi(j);
+						std::cout << canons[i]->get_cible()->get_HP() << std::endl;
 					}
 				}
 
@@ -40,7 +42,7 @@ void detection() {
 
 	taille_tour = canons_glace.size();
 	for (int i = 0; i < taille_tour; i++) {
-		if (canons_glace[i]->get_cible() != NULL)
+		if (canons_glace[i]->get_cible() == NULL)
 		{
 			distance_min = 1000;
 			for (int j = 0; j < taille_zombie; j++) {
@@ -68,7 +70,7 @@ void detection() {
 
 	taille_tour = mortiers.size();
 	for (int i = 0; i < taille_tour; i++) {
-		if (mortiers[i]->get_cible() != NULL)
+		if (mortiers[i]->get_cible() == NULL)
 		{
 			distance_min = 1000;
 			for (int j = 0; j < taille_zombie; j++) {
@@ -96,7 +98,7 @@ void detection() {
 
 	taille_tour = archers.size();
 	for (int i = 0; i < taille_tour; i++) {
-		if (archers[i]->get_cible() != NULL)
+		if (archers[i]->get_cible() == NULL)
 		{
 			distance_min = 1000;
 			for (int j = 0; j < taille_zombie; j++) {
