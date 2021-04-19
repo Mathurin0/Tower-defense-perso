@@ -11,6 +11,7 @@ Score* joueur = new Score();
 #include "class_ennemis.h"
 #include "class_tours.h"
 #include "placer_tours.h"
+#include "chateau.h"
 #include "zombie.h"
 #include "detection_ennemis.h"
 #include "attaquer_ennemis.h"

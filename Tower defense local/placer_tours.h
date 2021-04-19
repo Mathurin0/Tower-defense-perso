@@ -44,7 +44,7 @@ void creation_tour() {
             if (!Canon_t.loadFromFile("ressources/img/canon1.png")) {
                 std::cout << "Erreur du chargement de canon1.png" << std::endl;
             }
-            Canon_t.setSmooth(true);
+            Canon_t.setSmooth(true);    
             sf::Sprite sprite_Canon;
             sprite_Canon.setTexture(Canon_t);
             sprite_Canon.setPosition(position_souris.x, position_souris.y);

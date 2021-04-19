@@ -1,5 +1,3 @@
-#pragma once
-
 
 void Window() {
     window.create(sf::VideoMode(LARGEUR, HAUTEUR), "FC-Fiak | Tower defense");
@@ -20,6 +18,17 @@ void Window() {
         std::cout << "Erreur du chargement de la police" << std::endl;
     }
 
+    // Gestion de la map
+    sf::Texture map;
+    sf::Sprite sprite_map;
+    if (!map.loadFromFile("ressources/img/map.png"))
+    {
+        std::cout << "Erreur de chargement de la map" << std::endl;
+    }
+    sprite_map.setTexture(map);
+    
+    map.setSmooth(true);
+
 
     window.setPosition(sf::Vector2i(300, 70));    //150
     window.setFramerateLimit(60);
@@ -29,6 +38,8 @@ void Window() {
 
     int speed_animation = 0;
 
+  
+
     while (window.isOpen())
     {
         sf::Event event;
@@ -37,11 +48,18 @@ void Window() {
                 window.close();
         }
 
-        afficher_zombie();
+        window.draw(sprite_map);
 
         creation_tour();
         affichage_tours();
 
+        affichage_chateau();
+
+
+   
+        spawn_zombie();
+        affichage_zombies();
+        deplacement_zombie();
 
         window.display();
         window.clear();

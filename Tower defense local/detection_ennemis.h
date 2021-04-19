@@ -29,13 +29,13 @@ void detection() {
 						canons[i]->set_position_ennemi(j);
 					}
 				}
-				
+
 			}
 			if (distance_min == 1000) {
 				canons[i]->set_cible(NULL);
 			}
 		}
-		
+
 	}
 
 	taille_tour = canons_glace.size();

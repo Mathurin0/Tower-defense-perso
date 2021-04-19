@@ -4,19 +4,21 @@ void attaque() {
 	for (int i = 0; i < canons.size(); i++)
 	{
 		canons[i]->increment_compteur_attaque();
-		if (canons[i]->get_compteur_attaque() >= (60/canons[i]->get_coup_par_seconde())) {
+		if (canons[i]->get_compteur_attaque() >= (60 / canons[i]->get_coup_par_seconde())) {
 			if (canons[i]->get_cible() != NULL) {
 				canons[i]->get_cible()->prendre_degats(canons[i]->get_degats());
 				canons[i]->reset_compteur_attaque();
+				std::cout << "attaque" << std::endl;
 			}
 		}
 		if (canons[i]->get_cible()->get_HP() <= 0) {
 			joueur->gagner_argent(canons[i]->get_cible()->get_pieces());
 			sprites_zombies[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 			canons[i]->set_cible(NULL);
+			std::cout << "mort" << std::endl;
 		}
 	}
-	
+
 	for (int i = 0; i < canons_glace.size(); i++)
 	{
 		canons_glace[i]->increment_compteur_attaque();
