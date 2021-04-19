@@ -11,12 +11,6 @@ void Window() {
     }
     window.setIcon(93, 98, icon.getPixelsPtr());
 
-    // Gestion de la police 
-    sf::Font font;
-    if (!font.loadFromFile("ressources/Hiatus.ttf"))
-    {
-        std::cout << "Erreur du chargement de la police" << std::endl;
-    }
 
     // Gestion de la map
     sf::Texture map;
@@ -47,6 +41,7 @@ void Window() {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+        pause();
 
         window.draw(sprite_map);
 

@@ -20,13 +20,14 @@ Score* joueur = new Score();
 
 
 
-
+#include "pause.h"
 #include "fenetre.h"
 
 
 
 int main()
 {
+
 
     Window();
 

@@ -18,6 +18,7 @@ public:
     int get_pieces() {
         return this->pieces;
     }
+    void remove();
 };
 
 Zombie::Zombie(int x, int y) {
@@ -36,6 +37,10 @@ void Zombie::emplacement(int x, int y) {
 
     this->position.x = x;
     this->position.y = y;
+}
+
+void Zombie::remove() {
+    
 }
 
 

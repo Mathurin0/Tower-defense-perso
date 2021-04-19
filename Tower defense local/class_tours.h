@@ -3,6 +3,7 @@
 
 class Canon {
 private:
+    //variables de la classe en privé pour ne pouvoir y accéder que pas des fonctions
     int degat_par_coup;
     int portee;
     int coup_par_seconde;
@@ -13,6 +14,7 @@ private:
     int compteur_attaque;
     int position_ennemi;
 public:
+    //constructeurs, getteur, setteurs
     Canon(int x, int y);
     void level_up();
     sf::Vector2i get_position() {
