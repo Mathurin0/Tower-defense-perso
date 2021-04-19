@@ -11,7 +11,7 @@ std::vector<Zombie*> zombies;
 
 int sizeZombie = 32;
 
-int maxZombie = 2000;
+int maxZombie = 10;
 int zonzon = 0;
 
 bool finit = false;
