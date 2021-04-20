@@ -147,6 +147,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\FC-Fiak.ez\loose.h" />
     <ClInclude Include="attaquer_ennemis.h" />
     <ClInclude Include="chateau.h" />
     <ClInclude Include="class_ennemis.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="pause.h" />
+    <ClInclude Include="shop.h" />
     <ClInclude Include="zombie.h" />
     <ClInclude Include="joueur.h" />
     <ClInclude Include="MainMenu.cpp" />

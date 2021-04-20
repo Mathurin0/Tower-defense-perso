@@ -24,26 +24,34 @@ std::vector<Archers*> archers;
 
 void creation_tour() {
     //selection de la tour a placer
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && joueur->get_argent() >= 100) {
         selection = 0;
         place = 0;
+        joueur->paiement(100);
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && joueur->get_argent() >= 120) {
         selection = 1;
         place = 0;
+        joueur->paiement(120);
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && joueur->get_argent() >= 150) {
         selection = 2;
         place = 0;
+        joueur->paiement(150);
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && joueur->get_argent() >= 70) {
         selection = 3;
         place = 0;
+        joueur->paiement(70);
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
 
 
     //placement de la tour
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && place == 0) {
+    if (place == 0) {
         sf::Vector2i position_souris = sf::Mouse::getPosition(window);
         //pour verifier qu'on a bien demander de placer une tour avant
         if (selection == 0) {

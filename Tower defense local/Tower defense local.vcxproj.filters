@@ -68,5 +68,11 @@
     <ClInclude Include="pause.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="shop.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\FC-Fiak.ez\loose.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

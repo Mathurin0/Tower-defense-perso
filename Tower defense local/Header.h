@@ -14,4 +14,3 @@
 
 #define HAUTEUR 900
 #define LARGEUR 1600
-

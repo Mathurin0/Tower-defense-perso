@@ -10,7 +10,10 @@ private:
     int level;
     int cout[3];
     sf::Vector2i position;
-    Zombie* cible;
+    Zombie* cible_zombie;
+    Runner* cible_runner;
+    Tank* cible_tank;
+    Mage* cible_mage;
     int compteur_attaque;
     int position_ennemi;
 public:
@@ -23,9 +26,29 @@ public:
     int get_portee() {
         return this->portee;
     }
-    void set_cible(Zombie* zonzon);
-    Zombie* get_cible() {
-        return this->cible;
+    void set_cible_zombie(Zombie* zonzon) {
+        this->cible_zombie = zonzon;
+    }
+    Zombie* get_cible_zombie() {
+        return this->cible_zombie;
+    }
+    void set_cible_runner(Runner* forrest) {
+        this->cible_runner = forrest;
+    }
+    Runner* get_cible_runner() {
+        return this->cible_runner;
+    }
+    void set_cible_tank(Tank* tanky) {
+        this->cible_tank = tanky;
+    }
+    Tank* get_cible_tank() {
+        return this->cible_tank;
+    }
+    void set_cible_mage(Mage* sorcier) {
+        this->cible_mage = sorcier;
+    }
+    Mage* get_cible_mage() {
+        return this->cible_mage;
     }
     int get_degats() {
         return this->degat_par_coup;
@@ -59,7 +82,10 @@ Canon::Canon(int x, int y) {
     this->cout[2] = 150;
     this->position.x = x;
     this->position.y = y;
-    this->cible = NULL;
+    this->cible_zombie = NULL;
+    this->cible_runner = NULL;
+    this->cible_tank = NULL;
+    this->cible_mage = NULL;
     this->compteur_attaque = 0;
     this->position_ennemi = 0;
 }
@@ -77,9 +103,6 @@ void Canon::level_up() {
         this->coup_par_seconde = 8;
     }
 }
-void Canon::set_cible(Zombie* zonzon) {
-    this->cible = zonzon;
-}
 
 
 
@@ -91,7 +114,10 @@ private:
     int level;
     int cout[3];
     sf::Vector2i position;
-    Zombie* cible;
+    Zombie* cible_zombie;
+    Runner* cible_runner;
+    Tank* cible_tank;
+    Mage* cible_mage;
     int compteur_attaque;
     int position_ennemi;
 public:
@@ -103,9 +129,29 @@ public:
     int get_portee() {
         return this->portee;
     }
-    void set_cible(Zombie* cible);
-    Zombie* get_cible() {
-        return this->cible;
+    void set_cible_zombie(Zombie* zonzon) {
+        this->cible_zombie = zonzon;
+    }
+    Zombie* get_cible_zombie() {
+        return this->cible_zombie;
+    }
+    void set_cible_runner(Runner* forrest) {
+        this->cible_runner = forrest;
+    }
+    Runner* get_cible_runner() {
+        return this->cible_runner;
+    }
+    void set_cible_tank(Tank* tanky) {
+        this->cible_tank = tanky;
+    }
+    Tank* get_cible_tank() {
+        return this->cible_tank;
+    }
+    void set_cible_mage(Mage* sorcier) {
+        this->cible_mage = sorcier;
+    }
+    Mage* get_cible_mage() {
+        return this->cible_mage;
     }
     int get_degats() {
         return this->degat_par_coup;
@@ -139,7 +185,10 @@ Canon_Glace::Canon_Glace(int x, int y) {
     this->cout[2] = 200;
     this->position.x = x;
     this->position.y = y;
-    this->cible = NULL;
+    this->cible_zombie = NULL;
+    this->cible_runner = NULL;
+    this->cible_tank = NULL;
+    this->cible_mage = NULL;
     this->compteur_attaque = 0;
     this->position_ennemi = 0;
 }
@@ -157,9 +206,6 @@ void Canon_Glace::level_up() {
         this->coup_par_seconde = 4;
     }
 }
-void Canon_Glace::set_cible(Zombie* cible) {
-    this->cible = cible;
-}
 
 
 
@@ -171,7 +217,10 @@ private:
     int level;
     int cout[3];
     sf::Vector2i position;
-    Zombie* cible;
+    Zombie* cible_zombie;
+    Runner* cible_runner;
+    Tank* cible_tank;
+    Mage* cible_mage;
     int compteur_attaque;
     int position_ennemi;
 public:
@@ -183,9 +232,29 @@ public:
     int get_portee() {
         return this->portee;
     }
-    void set_cible(Zombie* cible);
-    Zombie* get_cible() {
-        return this->cible;
+    void set_cible_zombie(Zombie* zonzon) {
+        this->cible_zombie = zonzon;
+    }
+    Zombie* get_cible_zombie() {
+        return this->cible_zombie;
+    }
+    void set_cible_runner(Runner* forrest) {
+        this->cible_runner = forrest;
+    }
+    Runner* get_cible_runner() {
+        return this->cible_runner;
+    }
+    void set_cible_tank(Tank* tanky) {
+        this->cible_tank = tanky;
+    }
+    Tank* get_cible_tank() {
+        return this->cible_tank;
+    }
+    void set_cible_mage(Mage* sorcier) {
+        this->cible_mage = sorcier;
+    }
+    Mage* get_cible_mage() {
+        return this->cible_mage;
     }
     int get_degats() {
         return this->degat_par_coup;
@@ -219,7 +288,10 @@ Mortier::Mortier(int x, int y) {
     this->cout[2] = 250;
     this->position.x = x;
     this->position.y = y;
-    this->cible = NULL;
+    this->cible_zombie = NULL;
+    this->cible_runner = NULL;
+    this->cible_tank = NULL;
+    this->cible_mage = NULL;
     this->compteur_attaque = 0;
     this->position_ennemi = 0;
 }
@@ -237,9 +309,6 @@ void Mortier::level_up() {
         this->coup_par_seconde = 4;
     }
 }
-void Mortier::set_cible(Zombie* cible) {
-    this->cible = cible;
-}
 
 
 
@@ -251,7 +320,10 @@ private:
     int level;
     int cout[3];
     sf::Vector2i position;
-    Zombie* cible;
+    Zombie* cible_zombie;
+    Runner* cible_runner;
+    Tank* cible_tank;
+    Mage* cible_mage;
     int compteur_attaque;
     int position_ennemi;
 public:
@@ -263,9 +335,29 @@ public:
     int get_portee() {
         return this->portee;
     }
-    void set_cible(Zombie* cible);
-    Zombie* get_cible() {
-        return this->cible;
+    void set_cible_zombie(Zombie* zonzon) {
+        this->cible_zombie = zonzon;
+    }
+    Zombie* get_cible_zombie() {
+        return this->cible_zombie;
+    }
+    void set_cible_runner(Runner* forrest) {
+        this->cible_runner = forrest;
+    }
+    Runner* get_cible_runner() {
+        return this->cible_runner;
+    }
+    void set_cible_tank(Tank* tanky) {
+        this->cible_tank = tanky;
+    }
+    Tank* get_cible_tank() {
+        return this->cible_tank;
+    }
+    void set_cible_mage(Mage* sorcier) {
+        this->cible_mage = sorcier;
+    }
+    Mage* get_cible_mage() {
+        return this->cible_mage;
     }
     int get_degats() {
         return this->degat_par_coup;
@@ -299,7 +391,10 @@ Archers::Archers(int x, int y) {
     this->cout[2] = 120;
     this->position.x = x;
     this->position.y = y;
-    this->cible = NULL;
+    this->cible_zombie = NULL;
+    this->cible_runner = NULL;
+    this->cible_tank = NULL;
+    this->cible_mage = NULL;
     this->compteur_attaque = 0;
     this->position_ennemi = 0;
 }
@@ -316,7 +411,4 @@ void Archers::level_up() {
         this->portee = 170;
         this->coup_par_seconde = 15;
     }
-}
-void Archers::set_cible(Zombie* cible) {
-    this->cible = cible;
 }
