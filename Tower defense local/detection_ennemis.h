@@ -35,9 +35,11 @@ void detection() {
 					if (distance <= canons[i]->get_portee() && distance < distance_min) {
 						distance_min = distance;
 						canons[i]->set_cible_zombie(zombies[j]);
+						//on met les autres cibles à null car on ne souhaite avoir qu'une seule cible
 						canons[i]->set_cible_runner(NULL);
 						canons[i]->set_cible_tank(NULL);
 						canons[i]->set_cible_mage(NULL);
+						//on sauvegarde la position du zombie dans le tableau pour pouvoir le supprimer quand il sera mort
 						canons[i]->set_position_ennemi(j);
 					}
 				}

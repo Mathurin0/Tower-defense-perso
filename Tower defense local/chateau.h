@@ -3,7 +3,8 @@
 sf::Texture Chateau_t;
 sf::Sprite sprite_chateau;
 
-Chateau* Base = new Chateau(10);
+// Points de vie du château
+Chateau* Base = new Chateau(7);
 
 int ChateauHP = Base->Get_HP();
 
@@ -22,6 +23,7 @@ void affichage_chateau() {
         std::cout << "Erreur du chargement de chateau.png" << std::endl;
     }
 
+    // On joue avec 3 textures selon les dégats subits par les zombies au château  
 
 
     if (Base->Get_HP() <= ChateauHP / 1.3)
@@ -69,16 +71,11 @@ void affichage_vie_chateau() {
     vie_chateau.setString(hp_chateau_string);
     vie_chateau.setCharacterSize(30);
 
-    sf::Font font;
-    if (!font.loadFromFile("ressources/Hiatus.ttf"))
-    {
-        std::cout << "Erreur du chargement de la police" << std::endl;
-    }
     vie_chateau.setFont(font);
 
     vie_chateau.setPosition(1485, 420);
 
 
-    window.draw(vie_chateau);
+       window.draw(vie_chateau);
 
 }

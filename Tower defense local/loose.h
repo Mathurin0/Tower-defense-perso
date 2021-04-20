@@ -1,6 +1,4 @@
-
-
-
+// Cette fonction permet d'avoir 7 différents "loose screen", je tiens à préciser que les modèles photos ont bien évidement donnés leurs accords
 void ecran_loose()
 {
 

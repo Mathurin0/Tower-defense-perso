@@ -22,6 +22,10 @@ void attaque() {
 
 				sprites_zombies[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons[i]->set_cible_zombie(NULL);
+
+				zombiesEnVie -= 1;
+				zombiesKills += 1;
+
 			}
 			//on verifie si l'ennemi est a portee
 			if (canons[i]->get_cible_zombie() != NULL) {
@@ -53,6 +57,9 @@ void attaque() {
 
 				sprites_runners[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons[i]->set_cible_runner(NULL);
+
+				runnersEnVie -= 1;
+				runnerKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (canons[i]->get_cible_runner() != NULL) {
@@ -86,6 +93,9 @@ void attaque() {
 
 				sprites_tanks[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons[i]->set_cible_tank(NULL);
+
+				tanksEnVie -= 1;
+				tanksKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (canons[i]->get_cible_tank() != NULL) {
@@ -119,6 +129,9 @@ void attaque() {
 
 				sprites_mages[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons[i]->set_cible_mage(NULL);
+
+				magesEnVie -= 1;
+				magesKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (canons[i]->get_cible_mage() != NULL) {
@@ -158,6 +171,9 @@ void attaque() {
 
 				sprites_zombies[canons_glace[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons_glace[i]->set_cible_zombie(NULL);
+
+				zombiesEnVie -= 1;
+				zombiesKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (canons_glace[i]->get_cible_zombie() != NULL) {
@@ -191,6 +207,9 @@ void attaque() {
 
 				sprites_runners[canons_glace[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons_glace[i]->set_cible_runner(NULL);
+
+				runnersEnVie -= 1;
+				runnerKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (canons_glace[i]->get_cible_runner() != NULL) {
@@ -224,6 +243,9 @@ void attaque() {
 
 				sprites_tanks[canons_glace[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons_glace[i]->set_cible_tank(NULL);
+
+				tanksEnVie -= 1;
+				tanksKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (canons_glace[i]->get_cible_tank() != NULL) {
@@ -257,6 +279,9 @@ void attaque() {
 
 				sprites_mages[canons_glace[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons_glace[i]->set_cible_mage(NULL);
+
+				magesEnVie -= 1;
+				magesKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (canons_glace[i]->get_cible_mage() != NULL) {
@@ -297,6 +322,9 @@ void attaque() {
 
 				sprites_zombies[mortiers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				mortiers[i]->set_cible_zombie(NULL);
+
+				zombiesEnVie -= 1;
+				zombiesKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (mortiers[i]->get_cible_zombie() != NULL) {
@@ -330,6 +358,9 @@ void attaque() {
 
 				sprites_runners[mortiers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				mortiers[i]->set_cible_runner(NULL);
+
+				runnersEnVie -= 1;
+				runnerKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (mortiers[i]->get_cible_runner() != NULL) {
@@ -363,6 +394,9 @@ void attaque() {
 
 				sprites_tanks[mortiers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				mortiers[i]->set_cible_tank(NULL);
+
+				tanksEnVie -= 1;
+				tanksKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (mortiers[i]->get_cible_tank() != NULL) {
@@ -396,6 +430,9 @@ void attaque() {
 
 				sprites_mages[mortiers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				mortiers[i]->set_cible_mage(NULL);
+
+				magesEnVie -= 1;
+				magesKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (mortiers[i]->get_cible_mage() != NULL) {
@@ -436,6 +473,9 @@ void attaque() {
 
 				sprites_zombies[archers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				archers[i]->set_cible_zombie(NULL);
+
+				zombiesEnVie -= 1;
+				zombiesKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (archers[i]->get_cible_zombie() != NULL) {
@@ -469,6 +509,9 @@ void attaque() {
 
 				sprites_runners[archers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				archers[i]->set_cible_runner(NULL);
+
+				runnersEnVie -= 1;
+				runnerKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (archers[i]->get_cible_runner() != NULL) {
@@ -502,6 +545,9 @@ void attaque() {
 
 				sprites_tanks[archers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				archers[i]->set_cible_tank(NULL);
+
+				tanksEnVie -= 1;
+				tanksKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (archers[i]->get_cible_tank() != NULL) {
@@ -535,6 +581,9 @@ void attaque() {
 
 				sprites_mages[archers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				archers[i]->set_cible_mage(NULL);
+
+				magesEnVie -= 1;
+				magesKills += 1;
 			}
 			//on verifie si l'ennemi est a portee
 			if (archers[i]->get_cible_mage() != NULL) {

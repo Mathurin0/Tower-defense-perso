@@ -159,7 +159,6 @@
     <ClInclude Include="Header.h" />
     <ClInclude Include="pause.h" />
     <ClInclude Include="shop.h" />
-    <ClInclude Include="zombie.h" />
     <ClInclude Include="joueur.h" />
     <ClInclude Include="MainMenu.cpp" />
     <ClInclude Include="mainmenu.h" />

@@ -22,8 +22,8 @@ void Window() {
     
     map.setSmooth(true);
 
-
-    window.setPosition(sf::Vector2i(300, 70));    //150
+    // La fenêtre apparait au milieu de notre écran
+    window.setPosition(sf::Vector2i(300, 70));    
     window.setFramerateLimit(60);
 
 
@@ -40,10 +40,10 @@ void Window() {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        pause();
 
         window.draw(sprite_map);
 
+        affichage_vagues();
         
         detection();
         attaque();
@@ -72,6 +72,9 @@ void Window() {
         deplacement_mage();
 
         affichage_coin();
+        affichage_compteur_ennemis();
+
+        changement_vagues();
 
         window.display();
         window.clear();

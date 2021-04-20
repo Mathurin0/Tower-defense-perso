@@ -12,7 +12,9 @@ int loose_screen = 0;
 
 #include "shop.h"
 #include "loose.h"
+#include "mage_regen.h"
 #include "class_ennemis.h"
+#include "regen_mage.h"
 #include "class_tours.h"
 #include "class_chateau.h"
 #include "placer_tours.h"
@@ -21,11 +23,6 @@ int loose_screen = 0;
 #include "detection_ennemis.h"
 #include "attaquer_ennemis.h"
 
-
-
-
-
-#include "pause.h"
 #include "fenetre.h"
 
 
@@ -43,6 +40,9 @@ int main()
 	
 
     Window();
+
+
+	
 
     return 0;
 }

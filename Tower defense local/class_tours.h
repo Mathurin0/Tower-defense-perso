@@ -9,12 +9,16 @@ private:
     int coup_par_seconde;
     int level;
     int cout[3];
+    //variable pour la position de la tour dans la fenètre
     sf::Vector2i position;
+    //variables des diffèrente cible que pourrra prendre la tour
     Zombie* cible_zombie;
     Runner* cible_runner;
     Tank* cible_tank;
     Mage* cible_mage;
+    //permet de gèrer la vitesse d'attaque
     int compteur_attaque;
+    //position de la cible dans le tableau
     int position_ennemi;
 public:
     //constructeurs, getteur, setteurs
