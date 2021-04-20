@@ -74,5 +74,8 @@
     <ClInclude Include="..\..\FC-Fiak.ez\loose.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="ennemis.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -17,12 +17,9 @@ void attaque() {
 			//si l'ennemi est mort, on recupère la money et on tue le zombie
 			if (canons[i]->get_cible_zombie()->get_HP() <= 0)
 			{
-
-
 				joueur->gagner_argent(canons[i]->get_cible_zombie()->get_pieces());
 				std::cout << "Vous venez de gagner " << canons[i]->get_cible_zombie()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(canons[i]->get_cible_zombie()->get_pieces());
 				sprites_zombies[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons[i]->set_cible_zombie(NULL);
 			}
@@ -51,12 +48,9 @@ void attaque() {
 			//si l'ennemi est mort, on recupère la money et on tue le zombie
 			if (canons[i]->get_cible_runner()->get_HP() <= 0)
 			{
-
-
 				joueur->gagner_argent(canons[i]->get_cible_runner()->get_pieces());
 				std::cout << "Vous venez de gagner " << canons[i]->get_cible_runner()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(canons[i]->get_cible_runner()->get_pieces());
 				sprites_runners[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons[i]->set_cible_runner(NULL);
 			}
@@ -90,7 +84,6 @@ void attaque() {
 				joueur->gagner_argent(canons[i]->get_cible_tank()->get_pieces());
 				std::cout << "Vous venez de gagner " << canons[i]->get_cible_tank()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(canons[i]->get_cible_tank()->get_pieces());
 				sprites_tanks[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons[i]->set_cible_tank(NULL);
 			}
@@ -124,7 +117,6 @@ void attaque() {
 				joueur->gagner_argent(canons[i]->get_cible_mage()->get_pieces());
 				std::cout << "Vous venez de gagner " << canons[i]->get_cible_mage()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(canons[i]->get_cible_mage()->get_pieces());
 				sprites_mages[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons[i]->set_cible_mage(NULL);
 			}
@@ -164,7 +156,6 @@ void attaque() {
 				joueur->gagner_argent(canons_glace[i]->get_cible_zombie()->get_pieces());
 				std::cout << "Vous venez de gagner " << canons_glace[i]->get_cible_zombie()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(canons_glace[i]->get_cible_zombie()->get_pieces());
 				sprites_zombies[canons_glace[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons_glace[i]->set_cible_zombie(NULL);
 			}
@@ -198,7 +189,6 @@ void attaque() {
 				joueur->gagner_argent(canons_glace[i]->get_cible_runner()->get_pieces());
 				std::cout << "Vous venez de gagner " << canons_glace[i]->get_cible_runner()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(canons_glace[i]->get_cible_runner()->get_pieces());
 				sprites_runners[canons_glace[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons_glace[i]->set_cible_runner(NULL);
 			}
@@ -232,7 +222,6 @@ void attaque() {
 				joueur->gagner_argent(canons_glace[i]->get_cible_tank()->get_pieces());
 				std::cout << "Vous venez de gagner " << canons_glace[i]->get_cible_tank()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(canons_glace[i]->get_cible_tank()->get_pieces());
 				sprites_tanks[canons_glace[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons_glace[i]->set_cible_tank(NULL);
 			}
@@ -266,7 +255,6 @@ void attaque() {
 				joueur->gagner_argent(canons_glace[i]->get_cible_mage()->get_pieces());
 				std::cout << "Vous venez de gagner " << canons_glace[i]->get_cible_mage()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(canons_glace[i]->get_cible_mage()->get_pieces());
 				sprites_mages[canons_glace[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons_glace[i]->set_cible_mage(NULL);
 			}
@@ -307,7 +295,6 @@ void attaque() {
 				joueur->gagner_argent(mortiers[i]->get_cible_zombie()->get_pieces());
 				std::cout << "Vous venez de gagner " << mortiers[i]->get_cible_zombie()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(mortiers[i]->get_cible_zombie()->get_pieces());
 				sprites_zombies[mortiers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				mortiers[i]->set_cible_zombie(NULL);
 			}
@@ -341,7 +328,6 @@ void attaque() {
 				joueur->gagner_argent(mortiers[i]->get_cible_runner()->get_pieces());
 				std::cout << "Vous venez de gagner " << mortiers[i]->get_cible_runner()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(mortiers[i]->get_cible_runner()->get_pieces());
 				sprites_runners[mortiers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				mortiers[i]->set_cible_runner(NULL);
 			}
@@ -375,7 +361,6 @@ void attaque() {
 				joueur->gagner_argent(mortiers[i]->get_cible_tank()->get_pieces());
 				std::cout << "Vous venez de gagner " << mortiers[i]->get_cible_tank()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(mortiers[i]->get_cible_tank()->get_pieces());
 				sprites_tanks[mortiers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				mortiers[i]->set_cible_tank(NULL);
 			}
@@ -409,7 +394,6 @@ void attaque() {
 				joueur->gagner_argent(mortiers[i]->get_cible_mage()->get_pieces());
 				std::cout << "Vous venez de gagner " << mortiers[i]->get_cible_mage()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(mortiers[i]->get_cible_mage()->get_pieces());
 				sprites_mages[mortiers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				mortiers[i]->set_cible_mage(NULL);
 			}
@@ -450,7 +434,6 @@ void attaque() {
 				joueur->gagner_argent(archers[i]->get_cible_zombie()->get_pieces());
 				std::cout << "Vous venez de gagner " << archers[i]->get_cible_zombie()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(archers[i]->get_cible_zombie()->get_pieces());
 				sprites_zombies[archers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				archers[i]->set_cible_zombie(NULL);
 			}
@@ -484,7 +467,6 @@ void attaque() {
 				joueur->gagner_argent(archers[i]->get_cible_runner()->get_pieces());
 				std::cout << "Vous venez de gagner " << archers[i]->get_cible_runner()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(archers[i]->get_cible_runner()->get_pieces());
 				sprites_runners[archers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				archers[i]->set_cible_runner(NULL);
 			}
@@ -518,7 +500,6 @@ void attaque() {
 				joueur->gagner_argent(archers[i]->get_cible_tank()->get_pieces());
 				std::cout << "Vous venez de gagner " << archers[i]->get_cible_tank()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(archers[i]->get_cible_tank()->get_pieces());
 				sprites_tanks[archers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				archers[i]->set_cible_tank(NULL);
 			}
@@ -552,7 +533,6 @@ void attaque() {
 				joueur->gagner_argent(archers[i]->get_cible_mage()->get_pieces());
 				std::cout << "Vous venez de gagner " << archers[i]->get_cible_mage()->get_pieces() << " coins" << std::endl;
 
-				joueur->gagner_argent(archers[i]->get_cible_mage()->get_pieces());
 				sprites_mages[archers[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				archers[i]->set_cible_mage(NULL);
 			}
