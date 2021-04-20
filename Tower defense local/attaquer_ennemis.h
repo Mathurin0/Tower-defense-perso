@@ -18,10 +18,10 @@ void attaque() {
 			if (canons[i]->get_cible_zombie()->get_HP() <= 0)
 			{
 
-			
+
 				joueur->gagner_argent(canons[i]->get_cible_zombie()->get_pieces());
 				std::cout << "Vous venez de gagner " << canons[i]->get_cible_zombie()->get_pieces() << " coins" << std::endl;
-				
+
 				joueur->gagner_argent(canons[i]->get_cible_zombie()->get_pieces());
 				sprites_zombies[canons[i]->get_position_ennemi()].setColor(sf::Color::Transparent);
 				canons[i]->set_cible_zombie(NULL);

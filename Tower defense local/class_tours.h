@@ -73,7 +73,7 @@ public:
     }
 };
 Canon::Canon(int x, int y) {
-    this->degat_par_coup = 20;
+    this->degat_par_coup = 30;
     this->portee = 100;
     this->coup_par_seconde = 5;
     this->level = 1;
@@ -176,7 +176,7 @@ public:
     }
 };
 Canon_Glace::Canon_Glace(int x, int y) {
-    this->degat_par_coup = 10;
+    this->degat_par_coup = 20;
     this->portee = 150;
     this->coup_par_seconde = 2;
     this->level = 1;
@@ -279,7 +279,7 @@ public:
     }
 };
 Mortier::Mortier(int x, int y) {
-    this->degat_par_coup = 30;
+    this->degat_par_coup = 40;
     this->portee = 150;
     this->coup_par_seconde = 2;
     this->level = 1;
@@ -382,7 +382,7 @@ public:
     }
 };
 Archers::Archers(int x, int y) {
-    this->degat_par_coup = 15;
+    this->degat_par_coup = 25;
     this->portee = 120;
     this->coup_par_seconde = 7;
     this->level = 1;
